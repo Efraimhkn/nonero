@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Sans:wght@400;500;700&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Lato:wght@400;700&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;700&family=Nunito:wght@400;600;700&family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;700&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500;700&family=Work+Sans:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --card: 222 47% 12%;
+  --card-foreground: 210 40% 98%;
+  --primary: 188 94% 43%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 33% 17%;
+  --accent-foreground: 210 40% 98%;
+  --border: 214 32% 20%;
+  --input: 214 32% 20%;
+  --ring: 188 94% 43%;
+}
+
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, rgba(34,211,238,0.16), transparent 30%), #020617;
+}
+
+#root { min-height: 100vh; }
+
+.launcher-shell, .header, .sidebar, .container__content, .bottom-panel, .button, .toast {
+  font-family: var(--hydra-font);
+  font-size: var(--hydra-font-size);
+  font-weight: var(--hydra-font-weight);
+  line-height: var(--hydra-line-height);
+}
+
+.launcher-shell {
+  position: relative;
+  background-image: var(--hydra-wallpaper);
+  background-size: var(--hydra-bg-size);
+  background-position: var(--hydra-bg-position);
+  background-repeat: var(--hydra-bg-repeat);
+}
+
+.header { background-color: var(--hydra-header); backdrop-filter: var(--hydra-blur); }
+.sidebar { background-color: var(--hydra-sidebar); backdrop-filter: var(--hydra-blur); }
+.container__content { background-color: var(--hydra-content); backdrop-filter: var(--hydra-blur); }
+.bottom-panel { background-color: var(--hydra-bottom); backdrop-filter: var(--hydra-blur); }
+.button { border: none; border-radius: var(--hydra-radius); background: var(--hydra-primary); color: var(--hydra-text-on-button); box-shadow: var(--hydra-shadow); }
+.toast { z-index: 40; }
